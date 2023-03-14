@@ -71,7 +71,8 @@ async function block2OF(block: BlockEntity) {
   // of_url.searchParams.append('script', of_js_new_task);
   // of_url.searchParams.append('arg', `["${name}", "${note}", "${due_date}", "${defer_date}"]`);
 
-  const of_url = `omnifocus://localhost/omnijs-run?script=${encodeURIComponent(of_js_new_task)}&arg=${encodeURIComponent(`["${name}", "${note}", "${due_date}", "${defer_date}"]`)}`;
+  const of_url = `vja add "${name}" --note="${note}" --due="${due_date}", --alarm="${defer_date}`;
+  //const of_url = `omnifocus://localhost/omnijs-run?script=${encodeURIComponent(of_js_new_task)}&arg=${encodeURIComponent(`["${name}", "${note}", "${due_date}", "${defer_date}"]`)}`;
   window.open(of_url);
 }
 
